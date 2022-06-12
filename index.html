@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tu peso en otro Planeta</title>
+</head>
+<body>
+    <img src="image/57e3fe2fd802fe763626956d41672ce9.jpg" alt="astronauta">
+    <span class="texto">
+        <h1 class="titulo">Tu peso en otro planeta</h1>
+        <p>En la tierra pesas distinto que en<span class="changeColorMarte">Marte</span>o<span class="changeColorJupiter">Jupiter</span></p>
+        <div class="formulas">
+            <script>
+                var usuario = prompt("Cual es tu peso?")
+                var planeta = parseInt(prompt("Elige tu planeta\n1 es Marte 2 es Jupiter"))
+                var peso = parseInt(usuario);
+                var g_tierra = 9.8;
+                var g_marte = 3.7;
+                var g_jupiter = 24.8;
+                var peso_final;
+                var nombre;
+                if (planeta == 1)
+                {
+                    peso_final = peso * g_marte / g_tierra;
+                    nombre = "Marte";
+                }
+                else if (planeta == 2)
+                {
+                    peso_final = peso * g_jupiter / g_tierra;
+                    nombre = "Jupiter";
+                }
+                else
+                {
+                    peso_final = 10000000000;
+                    nombre = "Krypton";
+                }
+                peso_final = parseFloat(peso_final);
+                document.write("Tu peso en " + nombre + " es " + peso_final + " kilos");
+            </script>
+        </div>
+    </span>
+</body>
+</html>
